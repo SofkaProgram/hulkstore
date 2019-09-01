@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Crear venta</title>
+</head>
+<body>
+	<h1>Crear venta</h1>
+	<form action="#" th:action="@{/api/venta/registrar}" th:object="${crearVenta}" method="POST">
+		<label for="cantidad">Cantidad</label>
+		<input type="text" th:field="*{cantidad}" id="cantidad" placeholder="cantidad"/>
+		<br/>
+		<label for="idProducto">Id producto</label>
+		<input type="text" th:field="*{idProducto}" id="idProducto" placeholder="idProducto"/>
+		<br/>
+		<input type="submit" value="Enviar"/>
+	</form>
+	<br/>
+	<table>
+		<tr>
+			<td><a th:href="@{/api/producto/listaproductos}">Lista de productos</a></td>
+		</tr>
+		<tr>
+			<td><a th:href="@{/}">Pagina de inicio</a></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Crear venta fallo</title>
+</head>
+<body>
+	<h1>Creacion de la venta fallo</h1>
+	<small th:text="${errorCrearVenta}"></small>
+	<br/>
+	<table>
+		<tr>
+			<td><a th:href="@{/api/venta/pagina/crear}">Crear venta</a></td>
+		</tr>
+	</table>
+</body>
+</html>
